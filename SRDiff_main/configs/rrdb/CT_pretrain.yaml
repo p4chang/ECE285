@@ -1,0 +1,14 @@
+base_config:
+  - ../sr_base.yaml
+  - ../CT.yaml
+trainer_cls: tasks.rrdb.RRDBCTTask
+# model
+hidden_size: 64
+lr: 0.0002
+num_block: 17
+
+# train and eval
+max_updates: 100000
+batch_size: 1
+eval_batch_size: 1
+valid_steps: 3

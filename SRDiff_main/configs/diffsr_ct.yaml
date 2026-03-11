@@ -1,0 +1,17 @@
+base_config:
+  - ./diffsr_base.yaml
+  - ./CT.yaml.yaml
+
+trainer_cls: tasks.srdiff_CT.SRDiffCT
+
+# model
+unet_dim_mults: 1|2|3|4
+decay_steps: 200000
+
+# train and test
+batch_size: 1
+max_updates: 400000
+
+# Dataset (binary format, not pickle)
+binary_data_dir: ./SRDiff_main/tempsaved/CTZ
+save_intermediate: false
